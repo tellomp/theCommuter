@@ -53,4 +53,12 @@ For Saturday:
 
 
 
+With your group, answer each of the following questions:
+
+- Who is target audience: People on the metro, carpooling, bus,  commuting to and from work
+-  What is the problem that the product will address: News solves boredom issue, weather and traffic solves the issue of people on time or late to work
+-  What is primary goal of product: Goal of product is to inform user all the things that could impact the commute to and from work
+- Identify and prioritize essential user stories: Weather: want to know what weather is so I can pack a jacket News: I want to read about the news so I can get some entertainment from the content and be informed of the current global, national and local events. Audiobook: I want to get audio book recommendations, so that if I get stuck in traffic I can get some hands free entertainment
+- Weather and News will be our MVP, bare minimum
+
 
