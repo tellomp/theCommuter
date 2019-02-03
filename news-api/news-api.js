@@ -8,7 +8,6 @@
 // elementId - this is the id of the DOM element that you want to append the news stories onto
 //    example: "#news-results"
 // currently hard-coded to return only 5 articles
-
 // if the search field is empty, the function just searches for the 5 top stories from the api
 var searchNewsApi = function(search, elementId) {
   if (search.length > 0) {
