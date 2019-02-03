@@ -1,101 +1,98 @@
-<!doctype <!DOCTYPE html>
+<!DOCTYPE <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Commuter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <!-- Added a link to Bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
     <!-- Add CSS link -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
 
     <!-- Google fonts  -->
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Shadows+Into+Light" rel="stylesheet">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Shadows+Into+Light"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-
+  <body>
     <div class="jumbotron">
-        <strong><div id="time"></div> </strong>
-
+      <strong><div id="time"></div> </strong>
     </div>
     <main>
-        <div class= "content-wrap">
-            <div class="row">
-                <div class="col-md-9">
-                    <form class="form-inline">
-                    
-                        <div class="form-group mx-sm-3 mb-2">
-                                <label for="weatherInput" class="weather-input">Weather</label>
-                                <input type="text" class="form-control" id="weather-input" placeholder="Zipcode">
-                        </div>
-                              <button type="submit" class="btn btn-primary mb-2">Search</button>
+      <div class="content-wrap">
+        <div class="row">
+          <div class="col-md-9">
+            <form class="form-inline">
+              <div class="form-group mx-sm-3 mb-2">
+                <label for="weatherInput" class="weather-input">Weather</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="weather-input"
+                  placeholder="Zipcode"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary mb-2">Search</button>
+            </form>
 
-                    </form>
+            <div id="weahter-display"></div>
+          </div>
+        </div>
 
-                    <div id="weahter-display"></div>
+        <div class="row">
+          <div class="col-md-9">
+            <form class="form-inline">
+              <div class="form-group mx-sm-3 mb-2">
+                <label for="newsInput" class="news-input">News</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="news-input"
+                  placeholder="Search for news"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary mb-2">Search</button>
+            </form>
 
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-9">
-                    <form class="form-inline">
-                            <div class="form-group mx-sm-3 mb-2">
-                                    <label for="newsInput" class="news-input">News</label>
-                                    <input type="text" class="form-control" id="news-input" placeholder="Search for news">
-                                  </div>
-                                  <button type="submit" class="btn btn-primary mb-2">Search</button>
-    
-                    </form>
-
-                    <div id="news-display"></div>
-                </div>
-            </div>
-
-    </div>
-
+            <div id="news-display"></div>
+          </div>
+        </div>
+      </div>
     </main>
 
+    <!-- links to javascript go below this point -->
+    <!-- These are the javascript required for bootstrap & jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
 
-
-
-<script> 
-function clockStart() {
-    setInterval(function() {
-               date = new Date()
-               let hour = date.getHours();
-               let minutes = date.getMinutes();
-               let seconds = date.getSeconds();
-               document.getElementById("time").innerHTML = hour + " : "+ minutes + " : " + seconds;
-  }, 1000);
-  }
-clockStart()
-
-
-
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="main.js"></script>
-
-
-</body>
-
+    <!-- custom javascript files below here -->
+    <script src="assets/javascript/main.js"></script>
+    <script src="assets/javascript/news-api/news-api.js"></script>
+  </body>
 </html>
