@@ -9,6 +9,29 @@
 //    example: "#news-results"
 // currently hard-coded to return only 5 articles
 // if the search field is empty, the function just searches for the 5 top stories from the api
+let queryUrl = "https://newsapi.org/v2/top-headlines?country=us&pageSize=5&page=1&apiKey=d84f664229aa40cea4a6897f9fae83cf"
+// make the API Call
+$.ajax({
+  url: queryUrl,
+
+  success: function(data, status, xhr) {
+    // handle the response
+    // console.log(data);
+    //======================================================
+    //$(elementId).append(createNewsHtml(data));
+    $("#news-display").append(createNewsHtml(data));
+    //========================================================
+  },
+  error: function(xhr, status, error) {
+    // handle errors
+    // TODO tell the user something went wrong and try again
+
+    console.log(xhr);
+    console.log(status);
+    console.log(error);
+  }
+});
+
 //============================================
 $("#newsSubmit").on("click",function(event){
   event.preventDefault();
