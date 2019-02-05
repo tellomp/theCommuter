@@ -13,8 +13,9 @@
 //============================================
 var search = [];
 var searchContent = $("#news-input").val().trim();
+console.log(searchContent);
 search.push(searchContent);
-searchNewsApi(search);
+searchNewsApi(search); //?
 //=============================================
 var searchNewsApi = function(search, elementId) {
   if (search.length > 0) {
@@ -28,7 +29,10 @@ var searchNewsApi = function(search, elementId) {
     // keywords or phrases to search for
     // complete value for q must be URL-encoded
     // encodeURIComponent()
-    search = encodeURIComponent(search.trim()); //encodes URI component
+    //=====================================================
+    search = encodeURIComponent(search[0].trim()); //encodes URI component
+    //search = encodeURIComponent(search.trim());
+    //=======================================================
     queryUrl += `q=${search}`;
 
     // sources
