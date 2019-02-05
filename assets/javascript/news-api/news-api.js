@@ -8,8 +8,13 @@
 // elementId - this is the id of the DOM element that you want to append the news stories onto
 //    example: "#news-results"
 // currently hard-coded to return only 5 articles
-
 // if the search field is empty, the function just searches for the 5 top stories from the api
+//============================================
+var search = [];
+var searchContent = $("#news-input").val().trim();
+search.push(searchContent);
+searchNewsApi(search);
+//=============================================
 var searchNewsApi = function(search, elementId) {
   if (search.length > 0) {
     // build the query Url
@@ -22,7 +27,7 @@ var searchNewsApi = function(search, elementId) {
     // keywords or phrases to search for
     // complete value for q must be URL-encoded
     // encodeURIComponent()
-    search = encodeURIComponent(search.trim());
+    search = encodeURIComponent(search.trim()); //encodes URI component
     queryUrl += `q=${search}`;
 
     // sources
@@ -55,7 +60,10 @@ var searchNewsApi = function(search, elementId) {
       success: function(data, status, xhr) {
         // handle the response
         // console.log(data);
-        $(elementId).append(createNewsHtml(data));
+        //====================================================
+        $("#news-display").append(createNewsHtml(data));
+        //$(elementId).append(createNewsHtml(data));
+        //====================================================
       },
       error: function(xhr, status, error) {
         // handle errors
@@ -76,7 +84,10 @@ var searchNewsApi = function(search, elementId) {
       success: function(data, status, xhr) {
         // handle the response
         // console.log(data);
-        $(elementId).append(createNewsHtml(data));
+        //======================================================
+        //$(elementId).append(createNewsHtml(data));
+        $("#news-display").append(createNewsHtml(data));
+        //========================================================
       },
       error: function(xhr, status, error) {
         // handle errors

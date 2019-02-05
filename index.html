@@ -1,11 +1,10 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Commuter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <!-- Added a link to Bootstrap-->
     <link
       rel="stylesheet"
@@ -71,9 +70,12 @@
           </div>
         </div>
       </div>
+    
+
     </main>
 
-    <!-- links to javascript go below this point -->
+
+<!-- links to javascript go below this point -->
     <!-- These are the javascript required for bootstrap & jQuery -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -91,8 +93,28 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- custom javascript files below here -->
-    <script src="assets/javascript/main.js"></script>
-    <script src="assets/javascript/news-api/news-api.js"></script>
-  </body>
+<script> 
+function clockStart() {
+    setInterval(function() {
+               date = new Date()
+               let hour = date.getHours();
+               let minutes = date.getMinutes();
+               let seconds = date.getSeconds();
+               document.getElementById("time").innerHTML = hour + " : "+ minutes + " : " + seconds;
+  }, 1000);
+  }
+clockStart()
+
+
+
+
+</script>
+        <!-- custom javascript files below here -->
+<script src="assets/javascript/main.js"></script>
+<script src="assets/javascript/news-api/news-api.js"></script>
+
+
+</body>
+
 </html>
+
