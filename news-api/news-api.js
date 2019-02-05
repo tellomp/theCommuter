@@ -10,21 +10,14 @@
 // currently hard-coded to return only 5 articles
 // if the search field is empty, the function just searches for the 5 top stories from the api
 //============================================
-$("#newsSubmit").on("click",function(event){
-  event.preventDefault();
-  var search = [];
-  var searchContent = $("#news-input").val().trim();
-  search.push(searchContent);
-  searchNewsApi(search);
-  $("#news-display").empty();
-});
+var search = [];
+var searchContent = $("#news-input").val().trim();
+console.log(searchContent);
+search.push(searchContent);
 
 //=============================================
-//var searchNewsApi = function(search, elementId) {
-function searchNewsApi(search){
-  
-  if (search.length > 0 && search[0] !== "") {
-  
+var searchNewsApi = function(search, elementId) {
+  if (search.length > 0) {
     // build the query Url
     // use the everything endpoint
     let queryUrl = `https://newsapi.org/v2/everything?`;
@@ -63,7 +56,7 @@ function searchNewsApi(search){
     queryUrl += `&apiKey=d84f664229aa40cea4a6897f9fae83cf`;
 
     // console.log(queryUrl);
-  
+
     // make the API Call
     $.ajax({
       url: queryUrl,
@@ -111,7 +104,6 @@ function searchNewsApi(search){
     });
   }
 };
-
 
 // this function creates some html that can be appended to the DOM
 // the function requires the data from an api call to apinews.org
