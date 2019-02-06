@@ -9,6 +9,8 @@
 //    example: "#news-results"
 // currently hard-coded to return only 5 articles
 // if the search field is empty, the function just searches for the 5 top stories from the api
+
+
 let queryUrl = "https://newsapi.org/v2/top-headlines?country=us&pageSize=5&page=1&apiKey=d84f664229aa40cea4a6897f9fae83cf"
 // make the API Call
 $.ajax({
@@ -157,10 +159,8 @@ var createNewsHtml = function(apiData) {
 
 // this function creates the html string that will define a card for an article object
 var createNewsCard = function(article) {
-  return `<div class="card" style="width: 18rem;">
-    <img src="${article.urlToImage}" class="card-img-top" alt="${
-    article.description
-  }">
+  return `<div class="card" style="width: 25rem;">
+    <img src="${article.urlToImage}" class="card-img-top" alt="${article.description}">
     <div class="card-body">
       <p class="card-text">${article.description}</p>
       <a href="${article.url}" class="btn btn-primary">Go To Full Article</a>
