@@ -1,0 +1,104 @@
+<!doctype <!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Commuter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <!-- jQuery link -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
+  <!-- Add CSS link -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google fonts  -->
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Shadows+Into+Light" rel="stylesheet">
+</head>
+
+<body>
+  <container>
+
+    <div class="jumbotron">
+      <strong>
+        <div id="time"></div>
+      </strong>
+
+    </div>
+    <main>
+      <!-- test -->
+      <div class="content-wrap">
+        <div class="row">
+          <div class="col-md-9">
+            <form class="form-inline">
+
+              <div class="form-group mx-sm-3 mb-2">
+                <label for="weatherInput" class="weather-input">Weather</label>
+                <input type="text" class="form-control" id="weather-input" placeholder="Zipcode">
+              </div>
+              <button type="button" class="btn btn-primary mb-1" id="weather-button">Search</button>
+
+            </form>
+
+            <div id="weather-display"></div>
+
+
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-9">
+            <form class="form-inline">
+              <div class="form-group mx-sm-3 mb-2">
+                <label for="newsInput" class="news-input">News</label>
+                <input type="text" class="form-control" id="news-input" placeholder="Search for news">
+              </div>
+              <button type="button" class="btn btn-primary mb-2" id="news-button">Search</button>
+
+            </form>
+
+            <div id="news-display"></div>
+
+
+          </div>
+        </div>
+
+
+      </div>
+
+    </main>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      function clockStart() {
+        setInterval(function () {
+          date = new Date()
+          let hour = date.getHours();
+          let minutes = date.getMinutes();
+          let seconds = date.getSeconds();
+          document.getElementById("time").innerHTML = hour + " : " + minutes + " : " + seconds;
+        }, 1000);
+      }
+      clockStart()
+
+
+
+    </script>
+
+
+
+
+    <!-- <script src="main.js"></script> -->
+  </container>
+</body>
+
+</html>
