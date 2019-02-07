@@ -45,8 +45,7 @@ $("#newsSubmit").on("click",function(event){
 });
 
 //=============================================
-//var searchNewsApi = function(search, elementId) {
-function searchNewsApi(search){
+var searchNewsApi = function(search, elementId) {
   
   if (search.length > 0 && search[0] !== "") {
   
@@ -159,7 +158,7 @@ var createNewsHtml = function(apiData) {
 
 // this function creates the html string that will define a card for an article object
 var createNewsCard = function(article) {
-  return `<div class="card" style="width: 25rem;">
+  return `<div class="card" style="width: 25rem; border-style: solid; border-width: 3px;">
     <img src="${article.urlToImage}" class="card-img-top" alt="${article.description}">
     <div class="card-body">
       <p class="card-text">${article.description}</p>
