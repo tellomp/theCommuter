@@ -1,5 +1,8 @@
 # ProjectOne
 Project One Repo - Due Feb 11th
+
+# ProjectOne
+Project One Repo - Due Feb 11th
 Commuter App
 Include the following:
 1. Weather
@@ -10,6 +13,8 @@ Include the following:
 If we want to add more things, we def can!
 
 This is what we submitted to Ranjan
+# ProjectOne
+Project One Repo - Due Feb 11th
 
 ##Goal of website:
 Commuter app with the following:
@@ -17,7 +22,6 @@ Commuter app with the following:
 2. Weather
 3. Traffic Patterns
 4. Audibooks recommendations
-
 5. Have current time
 
 ## Need APIs for items 1-5
@@ -29,7 +33,6 @@ Commuter app with the following:
 - search parameters for news: they can type anything
 - search for traffic patterns: city and state, and zipcode, or road name
 - audiobooks: any topic
-
 - set time display by time zone
 
 ##Var display on DOM
@@ -43,7 +46,6 @@ Commuter app with the following:
 - AJAX CALL
 
 ## Weather
-
 - today’s weather
 - temperature in C or F
 - Sunny/Cloudy/Rainy/Snow picture display
@@ -58,19 +60,28 @@ Commuter app with the following:
 - search by: highway, address destination (point to point destination)
 
 ##Time
-- set by city 
+- set by city
 
 For Saturday:
 ## Do we want each section to go into different pages on the website? or external links?
-## Talk more about display and CSS 
+## Talk more about display and CSS
 
 
+Who is your target audience?
 
-With your group, answer each of the following questions:
+What is the problem that the product will address?
 
-- Who is target audience: People on the metro, carpooling, bus,  commuting to and from work
--  What is the problem that the product will address: News solves boredom issue, weather and traffic solves the issue of people on time or late to work
--  What is primary goal of product: Goal of product is to inform user all the things that could impact the commute to and from work
-- Identify and prioritize essential user stories: Weather: want to know what weather is so I can pack a jacket News: I want to read about the news so I can get some entertainment from the content and be informed of the current global, national and local events. Audiobook: I want to get audio book recommendations, so that if I get stuck in traffic I can get some hands free entertainment
-- Weather and News will be our MVP, bare minimum
+What is the primary goal of the product?
 
+Identify and prioritize essential user stories (limit this to 3 or fewer)?
+As a user, I want to have the latest news, so that I can read it on the metro.
+As a user, I want to know what the traffic is like on my commute, so that I can avoid traffic jams.
+
+Remember, your MVP should be the absolute minimum product that you need to pitch your idea to investors (or your classmates). Think bare essentials.
+
+As an example, the essential features of an instagram-like application might look like:
+
+As a user, I want to post pictures so that I can share my life.
+As a user, I want to be able to search for other users so that I can find their list of images.
+As a user, I want to be able to view other people's images so that I can keep up with what's happening in their lives.
+Things like liking photos, sending photos to friends, making instagram stories, etc are cool, but they aren't essential. They should not be part of the MVP.
