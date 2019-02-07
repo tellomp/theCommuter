@@ -1,28 +1,36 @@
 <!doctype <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Commuter</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-  <!-- Added a link to Bootstrap-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Commuter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Added a link to Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <!-- Add CSS link -->
+    <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!-- jQuery link -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <!-- Google fonts  -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Shadows+Into+Light"
+      rel="stylesheet"
+    />
 
-  <!-- Add CSS link -->
-  <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  <!-- Google fonts  -->
-  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Shadows+Into+Light" rel="stylesheet">
-</head>
+  </head>
 
-<body>
-  <container>
+  <body>
 
     <div class="jumbotron">
       <strong>
@@ -59,7 +67,8 @@
                 <label for="newsInput" class="news-input">News</label>
                 <input type="text" class="form-control" id="news-input" placeholder="Search for news">
               </div>
-              <button type="button" class="btn btn-primary mb-2" id="news-button">Search</button>
+
+              <button id = "newsSubmit" type="submit" class="btn btn-primary mb-2">Search</button>
 
             </form>
 

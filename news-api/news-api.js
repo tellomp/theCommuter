@@ -9,47 +9,15 @@
 //    example: "#news-results"
 // currently hard-coded to return only 5 articles
 // if the search field is empty, the function just searches for the 5 top stories from the api
-
-
-let queryUrl = "https://newsapi.org/v2/top-headlines?country=us&pageSize=5&page=1&apiKey=d84f664229aa40cea4a6897f9fae83cf"
-// make the API Call
-$.ajax({
-  url: queryUrl,
-
-  success: function(data, status, xhr) {
-    // handle the response
-    // console.log(data);
-    //======================================================
-    //$(elementId).append(createNewsHtml(data));
-    $("#news-display").append(createNewsHtml(data));
-    //========================================================
-  },
-  error: function(xhr, status, error) {
-    // handle errors
-    // TODO tell the user something went wrong and try again
-
-    console.log(xhr);
-    console.log(status);
-    console.log(error);
-  }
-});
-
 //============================================
-$("#newsSubmit").on("click",function(event){
-  event.preventDefault();
-  var search = [];
-  var searchContent = $("#news-input").val().trim();
-  search.push(searchContent);
-  searchNewsApi(search);
-  $("#news-display").empty();
-});
+var search = [];
+var searchContent = $("#news-input").val().trim();
+console.log(searchContent);
+search.push(searchContent);
 
 //=============================================
-//var searchNewsApi = function(search, elementId) {
-function searchNewsApi(search){
-  
-  if (search.length > 0 && search[0] !== "") {
-  
+var searchNewsApi = function(search, elementId) {
+  if (search.length > 0) {
     // build the query Url
     // use the everything endpoint
     let queryUrl = `https://newsapi.org/v2/everything?`;
@@ -88,7 +56,7 @@ function searchNewsApi(search){
     queryUrl += `&apiKey=d84f664229aa40cea4a6897f9fae83cf`;
 
     // console.log(queryUrl);
-  
+
     // make the API Call
     $.ajax({
       url: queryUrl,
@@ -137,7 +105,6 @@ function searchNewsApi(search){
   }
 };
 
-
 // this function creates some html that can be appended to the DOM
 // the function requires the data from an api call to apinews.org
 // this function uses bootstrap classes
@@ -159,8 +126,10 @@ var createNewsHtml = function(apiData) {
 
 // this function creates the html string that will define a card for an article object
 var createNewsCard = function(article) {
-  return `<div class="card" style="width: 25rem;">
-    <img src="${article.urlToImage}" class="card-img-top" alt="${article.description}">
+  return `<div class="card" style="width: 18rem;">
+    <img src="${article.urlToImage}" class="card-img-top" alt="${
+    article.description
+  }">
     <div class="card-body">
       <p class="card-text">${article.description}</p>
       <a href="${article.url}" class="btn btn-primary">Go To Full Article</a>

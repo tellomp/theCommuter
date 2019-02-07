@@ -57,6 +57,16 @@ font-size: 30px;
     padding-left: 150px;
 }
 
+.container{
+    width: 800px;
+    text-align: auto;
+}
+
+#newsdisplay{
+    width: 800px;
+    text-align: auto;
+}
+
 #time{
     /* border-color: rgb(172, 172, 179);  */
     /* border : solid; */
