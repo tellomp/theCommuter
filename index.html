@@ -26,7 +26,6 @@
     />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
   </head>
 
   <body>
@@ -47,7 +46,7 @@
                   placeholder="Zipcode"
                 />
               </div>
-              <button type="submit" class="btn btn-primary mb-2">Search</button>
+              <button type="submit" id="weatherSearch" class="btn btn-primary mb-2">Search</button>
             </form>
 
             <div id="weather-display"></div>
@@ -66,19 +65,22 @@
                   placeholder="Search for news"
                 />
               </div>
-              <button id = "newsSubmit" type="submit" class="btn btn-primary mb-2">Search</button>
+              <button
+                id="newsSubmit"
+                type="submit"
+                class="btn btn-primary mb-2"
+              >
+                Search
+              </button>
             </form>
 
             <div id="news-display"></div>
           </div>
         </div>
       </div>
-    
-
     </main>
 
-
-<!-- links to javascript go below this point -->
+    <!-- links to javascript go below this point -->
     <!-- These are the javascript required for bootstrap & jQuery -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -96,30 +98,9 @@
       crossorigin="anonymous"
     ></script>
 
-<script> 
-function clockStart() {
-    setInterval(function() {
-               date = new Date()
-               let hour = date.getHours();
-               let minutes = date.getMinutes();
-               let seconds = date.getSeconds();
-               document.getElementById("time").innerHTML = hour + " : "+ minutes + " : " + seconds;
-  }, 1000);
-  }
-clockStart()
-
-
-
-
-</script>
-
-        <!-- custom javascript files below here -->
-<script src="assets/javascript/main.js"></script>
-<script src="assets/javascript/news-api/news-api.js"></script>
-
-
-
-</body>
-
+    <!-- custom javascript files below here -->
+    <script src="assets/javascript/weather-api/weatherAPI.js"></script>
+    <script src="assets/javascript/news-api/news-api.js"></script>
+    <script src="assets/javascript/main.js"></script>
+  </body>
 </html>
-

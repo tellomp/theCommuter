@@ -11,43 +11,10 @@
 // if the search field is empty, the function just searches for the 5 top stories from the api
 
 
-let queryUrl = "https://newsapi.org/v2/top-headlines?country=us&pageSize=5&page=1&apiKey=d84f664229aa40cea4a6897f9fae83cf"
-// make the API Call
-$.ajax({
-  url: queryUrl,
 
-  success: function(data, status, xhr) {
-    // handle the response
-    // console.log(data);
-    //======================================================
-    //$(elementId).append(createNewsHtml(data));
-    $("#news-display").append(createNewsHtml(data));
-    //========================================================
-  },
-  error: function(xhr, status, error) {
-    // handle errors
-    // TODO tell the user something went wrong and try again
-
-    console.log(xhr);
-    console.log(status);
-    console.log(error);
-  }
-});
-
-//============================================
-$("#newsSubmit").on("click",function(event){
-  event.preventDefault();
-  var search = [];
-  var searchContent = $("#news-input").val().trim();
-  search.push(searchContent);
-  searchNewsApi(search);
-  $("#news-display").empty();
-});
-
-//=============================================
 var searchNewsApi = function(search, elementId) {
   
-  if (search.length > 0 && search[0] !== "") {
+  if (search.length > 0 && search !== "") {
   
     // build the query Url
     // use the everything endpoint
@@ -60,7 +27,7 @@ var searchNewsApi = function(search, elementId) {
     // complete value for q must be URL-encoded
     // encodeURIComponent()
     //=====================================================
-    search = encodeURIComponent(search[0].trim()); //encodes URI component
+    search = encodeURIComponent(search.trim()); //encodes URI component
     //search = encodeURIComponent(search.trim());
     //=======================================================
     queryUrl += `q=${search}`;
@@ -96,7 +63,7 @@ var searchNewsApi = function(search, elementId) {
         // handle the response
         // console.log(data);
         //====================================================
-        $("#news-display").append(createNewsHtml(data));
+        $(elementId).append(createNewsHtml(data));
         //$(elementId).append(createNewsHtml(data));
         //====================================================
       },
@@ -121,7 +88,7 @@ var searchNewsApi = function(search, elementId) {
         // console.log(data);
         //======================================================
         //$(elementId).append(createNewsHtml(data));
-        $("#news-display").append(createNewsHtml(data));
+        $(elementId).append(createNewsHtml(data));
         //========================================================
       },
       error: function(xhr, status, error) {
