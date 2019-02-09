@@ -34,13 +34,15 @@ $(function() {
   //=============================================
 });
 
+
+//We turned off function to stop Sam clock from pushing to the DOM
 function clockStart() {
-  setInterval(function() {
-    date = new Date();
-    let hour = date.getHours();
-    let minutes = date.getMinutes();
-    let seconds = date.getSeconds();
-    document.getElementById("time").innerHTML =
-      hour + " : " + minutes + " : " + seconds;
-  }, 1000);
+  // setInterval(function() {
+  //   date = new Date();
+  //   let hour = date.getHours();
+  //   let minutes = date.getMinutes();
+  //   let seconds = date.getSeconds();
+  //   document.getElementById("time").innerHTML =
+  //     hour + " : " + minutes + " : " + seconds;
+  // }, 1000);
 }
