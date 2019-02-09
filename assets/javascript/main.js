@@ -5,7 +5,7 @@ $(function() {
 
   // attach the weather button to the weather api function
   $("#weatherSearch").on("click", function(event) {
-    console.log(event);
+    //console.log(event);
     // Preventing the button from trying to submit the form
     event.preventDefault();
     // Storing weather info
