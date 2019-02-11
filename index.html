@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Commuter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Commuter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Added a link to Bootstrap-->
     <link
@@ -16,27 +17,114 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <!-- Google fonts  -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Indie+Flower"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Indie+Flower|Shadows+Into+Light"
-      rel="stylesheet"
-    />
-
+<link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
 
   <body>
     <div class="jumbotron">
-      <strong><div id="time"></div> </strong>
+
+      <div class="row">
+        <div class="col-md-4 moveClock">
+                <!-- Logo Begins -->
+      <div class="brand">
+          <div class="logo">
+            <svg width="200px" height="200px" >
+                  <path stroke="#ff004e" stroke-width="0" fill="#ff004e" d="M140.773,59.227C137.316,55.771,130.055,50,100,50
+                  s-37.317,5.771-40.774,9.227C55.77,62.684,49.999,69.104,50,100c-0.001,30.896,5.77,37.316,9.227,40.773
+                  C62.683,144.229,69.103,150,100,150c30.895,0,37.317-5.771,40.772-9.227C144.229,137.316,150,130.896,150,100
+                  S144.229,62.683,140.773,59.227z"/>
+            
+                  <path stroke="#ff004e" stroke-width="0" fill="#ff004e" d="M140.773,59.227C137.316,55.771,130.055,50,100,50
+                  s-37.317,5.771-40.774,9.227C55.77,62.684,49.999,69.104,50,100c-0.001,30.896,5.77,37.316,9.227,40.773
+                  C62.683,144.229,69.103,150,100,150c30.895,0,37.317-5.771,40.772-9.227C144.229,137.316,150,130.896,150,100
+                  S144.229,62.683,140.773,59.227z"/>
+            
+                  <path stroke="#ff004e" stroke-width="0" fill="#ff004e" d="M140.773,59.227C137.316,55.771,130.055,50,100,50
+                  s-37.317,5.771-40.774,9.227C55.77,62.684,49.999,69.104,50,100c-0.001,30.896,5.77,37.316,9.227,40.773
+                  C62.683,144.229,69.103,150,100,150c30.895,0,37.317-5.771,40.772-9.227C144.229,137.316,150,130.896,150,100
+                  S144.229,62.683,140.773,59.227z"/>
+            </svg>
+          </div>
+          </div>
+  
+  
+          <!-- Logo ends -->
+        </div>
+
+        <div class="col-md-8 ">
+       <!-- Begin Clock -->
+    <!-- Clock imported from https://codepen.io/iliadraznin/pen/JcqbE -->
+      <div id="watch" >
+          <div class="frame-face"></div>
+          <ul class="minute-marks">
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+          </ul>
+          <div class="digital-wrap">
+            <ul class="digit-hours">
+              <li>23</li>
+              <li>00</li><li>01</li><li>02</li><li>03</li><li>04</li><li>05</li>
+              <li>06</li><li>07</li><li>08</li><li>09</li><li>10</li><li>11</li>
+              <li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li>
+              <li>18</li><li>19</li><li>20</li><li>21</li><li>22</li>
+            </ul>
+            <ul class="digit-minutes">
+              <li>10</li><li>11</li>
+              <li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li>
+              <li>18</li><li>19</li><li>20</li><li>21</li><li>22</li><li>23</li>
+              <li>24</li><li>25</li><li>26</li><li>27</li><li>28</li><li>29</li>
+              <li>30</li><li>31</li><li>32</li><li>33</li><li>34</li><li>35</li>
+              <li>36</li><li>37</li><li>38</li><li>39</li><li>40</li><li>41</li>
+              <li>42</li><li>43</li><li>44</li><li>45</li><li>46</li><li>47</li>
+              <li>48</li><li>49</li><li>50</li><li>51</li><li>52</li><li>53</li>
+              <li>54</li><li>55</li><li>56</li><li>57</li><li>58</li><li>59</li>
+              <li>00</li><li>01</li><li>02</li><li>03</li><li>04</li><li>05</li>
+              <li>06</li><li>07</li><li>08</li><li>09</li>
+            </ul>
+            <ul class="digit-seconds">
+              <li>20</li><li>21</li><li>22</li><li>23</li>
+              <li>24</li><li>25</li><li>26</li><li>27</li><li>28</li><li>29</li>
+              <li>30</li><li>31</li><li>32</li><li>33</li><li>34</li><li>35</li>
+              <li>36</li><li>37</li><li>38</li><li>39</li><li>40</li><li>41</li>
+              <li>42</li><li>43</li><li>44</li><li>45</li><li>46</li><li>47</li>
+              <li>48</li><li>49</li><li>50</li><li>51</li><li>52</li><li>53</li>
+              <li>54</li><li>55</li><li>56</li><li>57</li><li>58</li><li>59</li>
+              <li>00</li><li>01</li><li>02</li><li>03</li><li>04</li><li>05</li>
+              <li>06</li><li>07</li><li>08</li><li>09</li><li>10</li><li>11</li>
+              <li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li>
+              <li>18</li><li>19</li>
+            </ul>
+          </div>
+          <ul class="digits">
+            <li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li>
+            <li>7</li><li>8</li><li>9</li><li>10</li><li>11</li><li>12</li>
+          </ul>
+          <div class="hours-hand"></div>
+          <div class="minutes-hand"></div>
+          <div class="seconds-hand"></div>
+        </div>
+  
+        <!-- End Clock -->
+
+
+        </div>
+
+
+      </div>
+
     </div>
     <main>
       <div class="content-wrap">
-        <div class="row">
+        <div class="row samRow">
           <div class="col-md-9">
-            <form class="form-inline">
+            <form class="form-inline" id="weatherBar">
               <div class="form-group mx-sm-3 mb-2">
                 <label for="weatherInput" class="weather-input">Weather</label>
                 <input
@@ -46,16 +134,16 @@
                   placeholder="Zipcode"
                 />
               </div>
-              <button type="submit" id="weatherSearch" class="btn btn-primary mb-2">Search</button>
+              <button type="submit" id="weatherSearch" class="btn btn-dark">Search</button>
             </form>
 
             <div id="weather-display"></div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-9">
-            <form class="form-inline">
+        <div class="row samRow">
+          <div class="col-md-12">
+            <form class="form-inline" id="newsBar">
               <div class="form-group mx-sm-3 mb-2">
                 <label for="newsInput" class="news-input">News</label>
                 <input
@@ -68,13 +156,13 @@
               <button
                 id="newsSubmit"
                 type="submit"
-                class="btn btn-primary mb-2"
+                class="btn btn-dark"
               >
                 Search
               </button>
             </form>
 
-            <div id="news-display"></div>
+            <div id="news-display" class="row"></div>
           </div>
         </div>
       </div>

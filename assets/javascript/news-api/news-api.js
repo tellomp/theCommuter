@@ -42,7 +42,7 @@ var searchNewsApi = function(search, elementId) {
     // int - number of results to return per page
 
     // hard coding the page size to 5
-    queryUrl += `&pageSize=5`;
+    queryUrl += `&pageSize=6`;
 
     // page
     // int - use this to page through results
@@ -60,6 +60,7 @@ var searchNewsApi = function(search, elementId) {
       url: queryUrl,
 
       success: function(data, status, xhr) {
+        console.log(data)
         // handle the response
         // console.log(data);
         //====================================================
@@ -78,12 +79,13 @@ var searchNewsApi = function(search, elementId) {
     });
   } else {
     // search field was empty
-    let queryUrl = "https://newsapi.org/v2/top-headlines?country=us&pageSize=5&page=1&apiKey=d84f664229aa40cea4a6897f9fae83cf"
+    let queryUrl = "https://newsapi.org/v2/top-headlines?country=us&pageSize=6&page=1&apiKey=d84f664229aa40cea4a6897f9fae83cf"
     // make the API Call
     $.ajax({
       url: queryUrl,
 
       success: function(data, status, xhr) {
+        console.log(data);
         // handle the response
         // console.log(data);
         //======================================================
@@ -109,8 +111,8 @@ var searchNewsApi = function(search, elementId) {
 // this function uses bootstrap classes
 var createNewsHtml = function(apiData) {
   // create a container
-  let myDiv = $("<div>");
-  $(myDiv).addClass("container");
+  let myDiv = $("<div class='row'>");
+  // $(myDiv).addClass("container");
   let myHtml = "";
 
   // create a bootstrap card for each article object
@@ -125,12 +127,27 @@ var createNewsHtml = function(apiData) {
 
 // this function creates the html string that will define a card for an article object
 var createNewsCard = function(article) {
-  return `<div class="card" style="width: 25rem; border-style: solid; border-width: 3px;">
-    <img src="${article.urlToImage}" class="card-img-top" alt="${article.description}">
+
+
+
+
+  return `
+  <div class="col spaceBottom">
+  <div class="card" style="width: 21rem; border-style: solid; border-width: 3px;">
+    <img src="${article.urlToImage}"  class="card-img-top imageSize" alt="${article.description}">
     <div class="card-body">
       <p class="card-text">${article.description}</p>
-      <a href="${article.url}" class="btn btn-primary">Go To Full Article</a>
+      <a href="${article.url}" class="btn btn-dark"">Go To Full Article</a>
     </div>
-  </div>`;
+    </div>
+  </div>
+  `;
+
+
+
+
+
+
+
 };
 //
