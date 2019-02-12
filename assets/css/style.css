@@ -105,6 +105,8 @@ body {
      background:#232425;
      background-color:#F8FCF7;
      font-family: 'Staatliches', cursive;
+     background-image: url('../images/bg-img.jpg');
+     background-size: cover;
 }
 ul { list-style:none; margin:0; padding:0 }
 #watch { font-size:1em; position:relative }
@@ -397,7 +399,8 @@ ul { list-style:none; margin:0; padding:0 }
     margin: 0 auto;
     padding: 60px 50px;
     overflow: auto;
-    background: #39A9DB;
+    /* background: #39A9DB; */
+    background: rgba(57, 169, 219, 0.8);
 }
 
 .content-wrap {
@@ -406,7 +409,7 @@ ul { list-style:none; margin:0; padding:0 }
     padding: 60px 80px;
     overflow: auto;
     font-size: 15px;
-    background: #BCECEA;
+    background: rgba(188, 236, 234, 0.8);
 }
 
 .weather-input{
@@ -448,4 +451,12 @@ font-size: 30px;
 
 #weatherBar {
     padding-left: 148px;
+}
+
+.clock-segment {
+  background-color: rgb(40, 40, 40);
+  color: white;
+  border: 1px solid white;
+  width: 90px;
+  text-align: center;
 }
