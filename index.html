@@ -25,7 +25,7 @@
     <div class="jumbotron">
 
       <div class="row">
-        <div class="col-md-4 moveClock">
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
                 <!-- Logo Begins -->
       <div class="brand">
           <div class="logo">
@@ -52,8 +52,15 @@
           <!-- Logo ends -->
         </div>
 
-        <div id="clock-div" class="col-md-8 ">
+        <div class="col-md-8 d-flex justify-content-center align-items-center">
        <!-- Begin Clock -->
+       <div id="clock-div" class="d-flex">
+          <span id="clock-hours" class="display-2 clock-segment">00</span>
+          <span id="clock-minutes" class="display-2 clock-segment">00</span>
+          <span id="clock-seconds" class="display-2 clock-segment">00</span>
+        </div>
+
+
     <!-- Clock imported from https://codepen.io/iliadraznin/pen/JcqbE -->
       <!-- <div id="watch" >
           <div class="frame-face"></div>

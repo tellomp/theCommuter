@@ -1,5 +1,7 @@
-// this file will contain the functions that build the clock based on the current time
 
+
+
+// this file will contain the functions that build the clock based on the current time
 let buildClockElements = function(currentTime) {
   // currentTime is a moment.js time object
   // returns the html of the clock stuff
