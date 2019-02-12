@@ -1,7 +1,9 @@
 // this function will execute when the page is done loading
 $(function() {
   // start the clock
-  clockStart();
+  //clockStart();
+  let now = moment();
+  $("#clock-div").html(buildClockElements(now));
 
   // attach the weather button to the weather api function
   $("#weatherSearch").on("click", function(event) {

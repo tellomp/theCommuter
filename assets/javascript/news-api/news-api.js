@@ -60,7 +60,7 @@ var searchNewsApi = function(search, elementId) {
       url: queryUrl,
 
       success: function(data, status, xhr) {
-        console.log(data)
+        // console.log(data)
         // handle the response
         // console.log(data);
         //====================================================
@@ -85,7 +85,7 @@ var searchNewsApi = function(search, elementId) {
       url: queryUrl,
 
       success: function(data, status, xhr) {
-        console.log(data);
+        // console.log(data);
         // handle the response
         // console.log(data);
         //======================================================
