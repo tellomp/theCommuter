@@ -52,10 +52,10 @@
           <!-- Logo ends -->
         </div>
 
-        <div class="col-md-8 ">
+        <div id="clock-div" class="col-md-8 ">
        <!-- Begin Clock -->
     <!-- Clock imported from https://codepen.io/iliadraznin/pen/JcqbE -->
-      <div id="watch" >
+      <!-- <div id="watch" >
           <div class="frame-face"></div>
           <ul class="minute-marks">
             <li></li><li></li><li></li><li></li><li></li><li></li>
@@ -69,11 +69,11 @@
           </ul>
           <div class="digital-wrap">
             <ul class="digit-hours">
-              <li>23</li>
-              <li>00</li><li>01</li><li>02</li><li>03</li><li>04</li><li>05</li>
-              <li>06</li><li>07</li><li>08</li><li>09</li><li>10</li><li>11</li>
-              <li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li>
-              <li>18</li><li>19</li><li>20</li><li>21</li><li>22</li>
+              <li>18</li>
+              <li>19</li><li>20</li><li>21</li><li>22</li><li>23</li><li>0</li>
+              <li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li>
+              <li>7</li><li>8</li><li>9</li><li>10</li><li>11</li><li>12</li>
+              <li>13</li><li>14</li><li>15</li><li>16</li><li>17</li>
             </ul>
             <ul class="digit-minutes">
               <li>10</li><li>11</li>
@@ -110,7 +110,7 @@
           <div class="minutes-hand"></div>
           <div class="seconds-hand"></div>
         </div>
-  
+   -->
         <!-- End Clock -->
 
 
@@ -185,10 +185,12 @@
       integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
     <!-- custom javascript files below here -->
     <script src="assets/javascript/weather-api/weatherAPI.js"></script>
     <script src="assets/javascript/news-api/news-api.js"></script>
+    <script src="assets/javascript/clock/clock.js"></script>
     <script src="assets/javascript/main.js"></script>
   </body>
 </html>
