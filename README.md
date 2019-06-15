@@ -1,4 +1,4 @@
-# The Commuter - Project One
+# The Commuter 
 
 ### Overview
 * Users can look up news articles, the weather, and the WMATA train schedule. 
